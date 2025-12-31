@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Letter For You 💌</title>
+    <meta
+      name="description"
+      content="A digital love letter crafted with care and affection"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Floating Hearts Background -->
+    <div id="hearts-container" class="hearts-container"></div>
+
+    <!-- Hero Section with Music Toggle -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">A Letter For You</h1>
+        <p class="hero-subtitle">Scroll down to read...</p>
+
+        <button
+          id="music-toggle"
+          class="music-toggle"
+          aria-label="Toggle music"
+        >
+          <div class="vinyl-record">
+            <div class="vinyl-label"></div>
+          </div>
+          <span class="music-text">Click to play music</span>
+        </button>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- Letter Content -->
+    <main id="letter" class="letter-container">
+      <article class="letter-content">
+        <div class="letter-paragraph" data-paragraph="1">
+          <p>To Someone <span class="highlight">Special</span>,</p>
+          <p>
+            As this year comes to an end, I find myself reflecting on all the
+            <span class="highlight">moments</span> that made it truly
+            meaningful. And when I think about what brought the most light into
+            my days, my thoughts always lead back to
+            <span class="highlight">you</span>. There's something about the way
+            our paths crossed that still feels like magic—a beautiful twist of
+            fate I never saw coming but am so incredibly
+            <span class="highlight">grateful</span> for.
+          </p>
+        </div>
+
+        <div class="letter-paragraph" data-paragraph="2">
+          <p>
+            I want you to know that every
+            <span class="highlight">conversation</span> we've had, every laugh
+            we've shared, and even the comfortable silences in between—they all
+            mean more to me than words could ever express. You have this
+            effortless way of making ordinary moments feel
+            <span class="highlight">extraordinary</span>. Whether we're talking
+            about nothing or everything, time with you always feels like a gift
+            I didn't know I needed.
+          </p>
+        </div>
+
+        <div class="letter-paragraph" data-paragraph="3">
+          <p>
+            Our <span class="highlight">journey</span> together, wherever it may
+            lead, has already taught me so much. You've shown me what it means
+            to genuinely enjoy someone's presence, to look forward to a simple
+            message, and to feel my heart smile at the thought of someone. I
+            don't know exactly what the
+            <span class="highlight">future</span> holds, but I do know that
+            having you in my life has made the present so much brighter.
+          </p>
+        </div>
+
+        <div class="letter-paragraph" data-paragraph="4">
+          <p>
+            I'm not in a rush. Good things take
+            <span class="highlight">time</span>, and you're one of those good
+            things I'd wait for—no matter how long it takes. What we have, this
+            beautiful connection that's still unfolding, is something I want to
+            <span class="highlight">treasure</span> and nurture. I believe in
+            us, in the way we understand each other, and in the possibility of
+            something truly wonderful blooming between us.
+          </p>
+        </div>
+
+        <div class="letter-paragraph" data-paragraph="5">
+          <p>
+            Thank you for being <span class="highlight">you</span>—for your
+            kindness, your warmth, and for the way you make me want to be a
+            better person. Thank you for giving me something to
+            <span class="highlight">hope</span> for and someone to believe in.
+            You may not know just how much you've touched my life, but I hope
+            this letter lets you see even a glimpse of what you mean to me.
+          </p>
+        </div>
+
+        <div class="letter-paragraph" data-paragraph="6">
+          <p>
+            As we step into a new year, I carry with me the
+            <span class="highlight">hope</span> that our story is just
+            beginning. Whatever comes next, I want you to know that I'm here,
+            cheering you on, caring for you, and
+            <span class="highlight">waiting</span>—patiently and
+            wholeheartedly—for whatever beautiful chapter we're meant to write
+            together.
+          </p>
+          <p class="letter-signature">
+            With all my <span class="highlight">heart</span>,<br />
+            <span class="signature-name">Yours, Always ❤️</span>
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section">
+      <div class="cta-content">
+        <p class="cta-text">Happy New Year! 🎊</p>
+        <p class="cta-subtext">
+          Here's to new beginnings and beautiful memories ahead
+        </p>
+        <button id="love-button" class="love-button">
+          <span class="button-text">I Love You</span>
+          <span class="button-heart">💕</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Audio Element -->
+    <audio id="background-music" loop>
+      <source
+        src="/audio/Eliza Maturan - Museo (Official Lyric Video).mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
