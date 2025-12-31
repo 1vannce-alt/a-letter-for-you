@@ -1,10 +1,5 @@
 import "./style.css";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import confetti from "canvas-confetti";
-
-// Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger);
 
 // ========================================
 // Initialize Application
@@ -12,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", () => {
   initFloatingHearts();
   initMusicToggle();
-  initScrollAnimations();
   initCTAButton();
 });
 
@@ -95,121 +89,6 @@ function initMusicToggle() {
 
     isPlaying = !isPlaying;
   });
-}
-
-// ========================================
-// GSAP Scroll Animations
-// ========================================
-function initScrollAnimations() {
-  // Animate each paragraph
-  const paragraphs = document.querySelectorAll(".letter-paragraph");
-
-  paragraphs.forEach((paragraph, index) => {
-    // Create scroll trigger for each paragraph
-    gsap.fromTo(
-      paragraph,
-      {
-        opacity: 0,
-        y: 60,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: paragraph,
-          start: "top 80%",
-          end: "top 20%",
-          toggleActions: "play none none reverse",
-          // Fade out when scrolling past
-          onLeave: () => {
-            gsap.to(paragraph, {
-              opacity: 0.3,
-              duration: 0.5,
-              ease: "power2.out",
-            });
-          },
-          onEnterBack: () => {
-            gsap.to(paragraph, {
-              opacity: 1,
-              duration: 0.5,
-              ease: "power2.out",
-            });
-          },
-        },
-      }
-    );
-
-    // Stagger animation for highlighted words within each paragraph
-    const highlights = paragraph.querySelectorAll(".highlight");
-
-    gsap.fromTo(
-      highlights,
-      {
-        scale: 0.8,
-        opacity: 0,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.15,
-        ease: "back.out(1.7)",
-        scrollTrigger: {
-          trigger: paragraph,
-          start: "top 75%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  });
-
-  // CTA section animation
-  const ctaContent = document.querySelector(".cta-content");
-
-  gsap.fromTo(
-    ctaContent,
-    {
-      opacity: 0,
-      y: 60,
-      scale: 0.9,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".cta-section",
-        start: "top 70%",
-        toggleActions: "play none none reverse",
-      },
-    }
-  );
-
-  // Animate Love button with a slight delay
-  const loveButton = document.querySelector(".love-button");
-
-  gsap.fromTo(
-    loveButton,
-    {
-      scale: 0,
-      rotation: -10,
-    },
-    {
-      scale: 1,
-      rotation: 0,
-      duration: 0.8,
-      ease: "elastic.out(1, 0.5)",
-      scrollTrigger: {
-        trigger: ".cta-section",
-        start: "top 60%",
-        toggleActions: "play none none reverse",
-      },
-    }
-  );
 }
 
 // ========================================
