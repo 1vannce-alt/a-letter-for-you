@@ -543,8 +543,8 @@ body {
   }
 
   .letter-paragraph p {
-    font-size: clamp(1rem, 2.2vw, 1.15rem);
-    text-align: left;
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    text-align: justify;
     line-height: 1.9;
   }
 
@@ -626,7 +626,7 @@ body {
   }
 
   .letter-paragraph p {
-    font-size: clamp(0.95rem, 4vw, 1.05rem);
+    font-size: clamp(1.15rem, 5vw, 1.4rem);
     line-height: 1.85;
   }
 
@@ -678,7 +678,7 @@ body {
   }
 
   .letter-paragraph p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   .cta-text {
